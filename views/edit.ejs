@@ -1,0 +1,24 @@
+<% include ./partials/header %>
+
+<div class="ui container piled segment">
+    <h1>Επεξεργασία: "<%= post.title%>"</h1>
+    
+    <form class = "ui form" action = "/posts/<%= post._id%>?_method=PUT" method = "POST">
+        <div class = "field">
+            <label>Τίτλος</label>
+            <input type = "text" name = "post[title]" value = "<%= post.title%>" required>
+        </div>
+        <div class = "field">
+            <label>Εικόνα</label>
+            <input type = "text" name = "post[image]" value = "<%= post.image%>" required>
+        </div>
+        <div class="field">
+            <label>Κείμενο</label>
+            <textarea name = "post[body]" rows="15" required><%= post.body%></textarea>
+          </div>
+        <input class="ui black button" type = "submit" value = "Ανανέωση">
+    </form>  
+    </div>
+
+
+<% include ./partials/footer %>

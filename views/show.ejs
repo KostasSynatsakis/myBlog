@@ -1,0 +1,29 @@
+<% include ./partials/header %>
+
+<div class = "ui  container piled segment">
+        <h1 class = "ui huge header"><%=post.title%></h1>
+        <div >
+                <div class = "item">
+                   <div class = "content">
+                        <span class = "ui grey sub header"><%= post.created.toDateString() %></span> 
+                    </div>
+                   <img class = "ui fluid small image" src = "<%= post.image %>">
+                        <div class = "description">   
+                           <p><%- post.body %></p>      
+                        </div>
+                        <div class = "ui segment">
+                               <a class="ui brown button" href = "/posts/<%= post._id%>/edit">επεξεργασία</a>
+                               <form id = "deleteform" action = "/posts/<%= post._id%>?_method=DELETE" method = "POST">
+                                        <button class="ui red button">διαγραφή</button>
+                                </form>
+                                  
+                        </div>
+
+                </dv>
+                
+                             
+        </div>
+
+</div>
+
+<% include ./partials/footer %>

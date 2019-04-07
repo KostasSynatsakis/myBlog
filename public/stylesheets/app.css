@@ -1,0 +1,11 @@
+.header {
+    font-size: 1.6em;
+}
+
+.ui.menu {
+    border-radius:0;
+}
+
+#deleteform {
+    display: inline;
+}

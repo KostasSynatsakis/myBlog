@@ -1,0 +1,24 @@
+<% include ./partials/header %>
+
+<div class="ui container piled segment">
+    <h1>Νέα ανάρτηση</h1>
+    
+    <form class = "ui form" action = "/posts" method = "POST">
+        <div class = "field">
+            <label>Τίτλος</label>
+            <input type = "text" name = "post[title]" placeholder = "τίτλος της αναρτησης" required>
+        </div>
+        <div class = "field">
+            <label>Εικόνα</label>
+            <input type = "text" name = "post[image]" placeholder = "διεύθυνση url εικόνας" required>
+        </div>
+        <div class="field">
+            <label>Κείμενο</label>
+            <textarea name = "post[body]" rows="15" required></textarea>
+          </div>
+        <input class="ui black button" type = "submit" value = "Υποβολή">
+    </form>  
+    </div>
+
+
+<% include ./partials/footer %>
